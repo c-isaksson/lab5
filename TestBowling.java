@@ -10,7 +10,7 @@ public class TestBowling {
 
 	@Test
 	public void testPerfectGame() {
-		int roll[] = { 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0 };
+		int roll[] = { 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,10 };
 		game.frames = roll;
 
 		assertEquals(game.calcScore(), 300);
