@@ -7,8 +7,11 @@ import org.junit.Test;
 public class TestBowling {
 
 	@Test
-	public void firstTest() {
+	public void testFrameScore() {
 		int[] frame = new int[] {2, 4};
-		assertEquals(frame.length, 2);
+		int score = 0;
+		for (int i = 0; i < frame.length; i++ )
+			score += frame[i];
+		assertEquals(score, 6);
 	}
 }
