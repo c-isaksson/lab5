@@ -8,10 +8,13 @@ public class Game {
 		int index = 0;
 		for (int i = 0; i < 10; i++) {
 			if (isStrike(index)) {
-				if (multipleStrike(index))
-					score += 10 +frames[index+2] +frames[index+4];
-				else
+				if (perfectAtLastRound(index))
 					score += 10 +frames[index+2] +frames[index+3];
+				
+				else if (multipleStrike(index))
+						score += 10 +frames[index+2] +frames[index+4];
+				else
+						score += 10 +frames[index+2] +frames[index+3];
 			}
 			else if (isSpare(index))
 				score += 10 +frames[index+2];
@@ -31,6 +34,9 @@ public class Game {
 	}
 	private boolean multipleStrike(int index) {
 		return frames[index+2] == 10;
+	}
+	private boolean perfectAtLastRound(int index) {
+		return index == 18;
 	}
 
 	
