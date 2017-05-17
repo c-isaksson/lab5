@@ -7,8 +7,12 @@ public class Game {
 		int score = 0;
 		int index = 0;
 		for (int i = 0; i < 10; i++) {
-			if (isStrike(index)) 
-				score += 10 +frames[index+2] +frames[index+3];
+			if (isStrike(index)) {
+				if (multipleStrike(index))
+					score += 10 +frames[index+2] +frames[index+4];
+				else
+					score += 10 +frames[index+2] +frames[index+3];
+			}
 			else if (isSpare(index))
 				score += 10 +frames[index+2];
 			else 
@@ -25,4 +29,9 @@ public class Game {
 	private boolean isSpare(int index) {
 		return frames[index] + frames[index+1] == 10;
 	}
+	private boolean multipleStrike(int index) {
+		return frames[index+2] == 10;
+	}
+
+	
 }
