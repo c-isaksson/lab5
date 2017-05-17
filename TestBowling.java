@@ -10,9 +10,9 @@ public class TestBowling {
 
 	@Test
 	public void testStrikeAndSpare() {
-		int roll[] = { 10,0, 10,0, 10,0, 10,0, 4,4, 5,3, 3,3, 4,5, 8,1, 2,6 };
+		int roll[] = { 8,2, 5,5, 7,2, 3,6, 4,4, 5,3, 3,3, 4,5, 8,1, 2,6 };
 		game.frames = roll;
 
-		assertEquals(game.calcScore(), 112);
+		assertEquals(game.calcScore(), 98);
 	}
 }
