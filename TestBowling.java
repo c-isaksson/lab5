@@ -9,10 +9,10 @@ public class TestBowling {
 	private Game game = new Game();
 
 	@Test
-	public void testBonusAsAStrike() {
-		int roll[] = { 1,5, 3,6, 7,2, 3,6, 4,4, 5,3, 3,3, 4,5, 8,1, 2,8, 10 };
+	public void testPerfectGame() {
+		int roll[] = { 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0, 10,0 };
 		game.frames = roll;
 
-		assertEquals(game.calcScore(), 93);
+		assertEquals(game.calcScore(), 300);
 	}
 }
