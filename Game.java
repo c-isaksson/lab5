@@ -10,7 +10,7 @@ public class Game {
 			if (isStrike(index)) 
 				score += 10 +frames[index+2] +frames[index+3];
 			else if (isSpare(index))
-				score += 10 +frames[index+1];
+				score += 10 +frames[index+2];
 			else 
 				score += frames[index] +frames[index+1];
 			
